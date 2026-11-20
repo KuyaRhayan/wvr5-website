@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>TFOE-PEI Western Visayas Region 5</title>
 
 <style>
@@ -13,106 +12,235 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
     color: #222;
+    line-height: 1.6;
 }
 
 header {
     background: #111;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 25px 15px;
+    border-bottom: 5px solid #e00000;
 }
 
 header h1 {
-    color: #f5c400;
-    font-size: 28px;
+    color: #ffcc00;
+    font-size: 25px;
 }
 
 header p {
-    margin-top: 8px;
+    font-size: 14px;
 }
 
 nav {
     background: #c90000;
-    padding: 15px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
+    padding: 14px 17px;
+    font-size: 14px;
     font-weight: bold;
 }
 
+nav a:hover {
+    background: #900000;
+}
+
 .hero {
-    background: linear-gradient(135deg, #b50000, #111);
+    background: linear-gradient(
+        120deg,
+        #b00000,
+        #300000
+    );
     color: white;
-    padding: 80px 20px;
     text-align: center;
+    padding: 90px 20px;
 }
 
 .hero h2 {
-    font-size: 40px;
+    font-size: 38px;
     color: #ffcc00;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 18px;
     max-width: 800px;
     margin: auto;
+    font-size: 18px;
+}
+
+.hero .button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: #111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 section {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 55px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 section h2 {
-    color: #b50000;
-    margin-bottom: 25px;
+    text-align: center;
+    color: #c90000;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.about {
+    text-align: center;
+}
+
+.about p {
+    max-width: 900px;
+    margin: 10px auto;
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
 .card {
     background: white;
     padding: 25px;
-    width: 250px;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card h3 {
-    color: #b50000;
+    color: #c90000;
+    margin-bottom: 12px;
+}
+
+.card .icon {
+    font-size: 40px;
     margin-bottom: 10px;
+}
+
+.services {
+    background: #eeeeee;
+    max-width: none;
+}
+
+.services .cards,
+.events .cards,
+.clubs .cards {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.event-card {
+    border-left: 5px solid #c90000;
+    text-align: left;
+}
+
+.news {
+    background: #fff;
+    max-width: none;
+}
+
+.news-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery-box {
+    background: #eee;
+    padding: 40px 20px;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+}
+
+.contact {
+    background: #222;
+    color: white;
+    max-width: none;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #ffcc00;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #ffcc00;
 }
 
 footer {
     background: #111;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 25px 15px;
+    font-size: 13px;
 }
 
-.facebook-button {
-    display: inline-block;
-    background: #1877f2;
-    color: white;
-    padding: 15px 25px;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+@media(max-width:600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
 }
 </style>
 </head>
@@ -122,7 +250,8 @@ footer {
 <header>
     <h1>🦅 THE FRATERNAL ORDER OF EAGLES</h1>
     <p>Philippine Eagles, Inc.</p>
-    <p><strong>WESTERN VISAYAS REGION 5</strong></p>
+    <h3>WESTERN VISAYAS REGION 5</h3>
+    <p>Brotherhood • Unity • Service • Leadership</p>
 </header>
 
 <nav>
@@ -132,96 +261,298 @@ footer {
     <a href="#services">SERVICES</a>
     <a href="#events">EVENTS</a>
     <a href="#news">NEWS</a>
+    <a href="#gallery">GALLERY</a>
     <a href="#contact">CONTACT</a>
 </nav>
 
 <div class="hero" id="home">
     <h2>WELCOME TO WESTERN VISAYAS REGION 5</h2>
+
     <p>
-        A Brotherhood dedicated to service, unity, leadership,
-        humanitarian activities, and community development.
+        A Brotherhood dedicated to service, unity,
+        leadership, humanitarian activities,
+        and community development.
     </p>
+
+    <a href="#about" class="button">LEARN MORE ABOUT US</a>
 </div>
 
-<section id="about">
+<section id="about" class="about">
     <h2>ABOUT WVR5</h2>
+
     <p>
         The Fraternal Order of Eagles – Philippine Eagles, Inc.
-        Western Visayas Region 5 is committed to promoting
-        brotherhood, unity, humanitarian service, and community involvement.
+        Western Visayas Region 5 is a brotherhood committed
+        to promoting unity, leadership, camaraderie,
+        humanitarian service, and community involvement.
+    </p>
+
+    <p>
+        Through our clubs and dedicated members,
+        we continue to uphold the spirit of service
+        and strengthen our commitment to helping
+        communities and those in need.
+    </p>
+
+    <p>
+        <strong>
+        WE SERVE WITH PRIDE, UNITY, AND BROTHERHOOD.
+        </strong>
     </p>
 </section>
 
-<section id="clubs">
+<section id="clubs" class="clubs">
     <h2>OUR CLUBS</h2>
 
     <div class="cards">
+
         <div class="card">
+            <div class="icon">🦅</div>
             <h3>Iloilo City Executives Eagles Club</h3>
-            <p>Service Through Strong Brotherhood</p>
+            <p>Brotherhood and humanitarian service.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🦅</div>
             <h3>Iloilo Elite Executives Eagles Club</h3>
-            <p>Service Through Strong Brotherhood</p>
+            <p>Leadership and community involvement.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🦅</div>
             <h3>Iloilo United Executives Eagles Club</h3>
-            <p>Service Through Strong Brotherhood</p>
+            <p>United in service and brotherhood.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🦅</div>
             <h3>Iloilo Uptown Executives Eagles Club</h3>
-            <p>Service Through Strong Brotherhood</p>
+            <p>Serving communities with dedication.</p>
         </div>
+
+        <div class="card">
+            <div class="icon">🦅</div>
+            <h3>Iloilo Midtown Executives Eagles Club</h3>
+            <p>Promoting fellowship and service.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🦅</div>
+            <h3>Iloilo Metropolitan Executives Eagles Club</h3>
+            <p>Committed to humanitarian activities.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🦅</div>
+            <h3>Iloilo Dynasty Executives Eagles Club</h3>
+            <p>Brotherhood, leadership, and service.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🦅</div>
+            <h3>Iloilo City Executives Lady Eagles Club</h3>
+            <p>Women in service and humanitarian leadership.</p>
+        </div>
+
     </div>
 </section>
 
-<section id="services">
+<section id="services" class="services">
     <h2>HUMANITARIAN SERVICES</h2>
 
     <div class="cards">
+
         <div class="card">
-            <h3>Community Service</h3>
-            <p>Serving communities through meaningful humanitarian activities.</p>
+            <div class="icon">❤️</div>
+            <h3>Community Outreach</h3>
+            <p>
+                Helping communities through outreach
+                programs and assistance to the needy.
+            </p>
         </div>
 
         <div class="card">
-            <h3>Medical Missions</h3>
-            <p>Providing assistance and healthcare services to communities.</p>
+            <div class="icon">🌳</div>
+            <h3>Environmental Programs</h3>
+            <p>
+                Tree planting, environmental protection,
+                clean-up drives, and plogging activities.
+            </p>
         </div>
 
         <div class="card">
+            <div class="icon">🩸</div>
             <h3>Blood Letting</h3>
-            <p>Saving lives through voluntary blood donation.</p>
+            <p>
+                Promoting voluntary blood donation
+                and helping save lives.
+            </p>
         </div>
+
+        <div class="card">
+            <div class="icon">🏥</div>
+            <h3>Medical Missions</h3>
+            <p>
+                Medical and dental services
+                for underserved communities.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎒</div>
+            <h3>Education Assistance</h3>
+            <p>
+                School supplies, educational assistance,
+                and support for students.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Humanitarian Assistance</h3>
+            <p>
+                Assistance to families affected
+                by disasters and emergencies.
+            </p>
+        </div>
+
     </div>
 </section>
 
-<section id="events">
-    <h2>EVENTS & ACTIVITIES</h2>
-    <p>Regional events, club activities, conventions, and humanitarian programs.</p>
+<section id="events" class="events">
+    <h2>UPCOMING EVENTS & ACTIVITIES</h2>
+
+    <div class="cards">
+
+        <div class="card event-card">
+            <h3>Regional Activities</h3>
+            <p>
+                Stay updated with regional meetings,
+                humanitarian services, fellowship,
+                and organizational activities.
+            </p>
+        </div>
+
+        <div class="card event-card">
+            <h3>Club Activities</h3>
+            <p>
+                Updates from our member clubs
+                and their community programs.
+            </p>
+        </div>
+
+        <div class="card event-card">
+            <h3>Special Events</h3>
+            <p>
+                Announcements about conventions,
+                chartering, anniversaries,
+                fellowship, and special occasions.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<section id="news">
-    <h2>NEWS & UPDATES</h2>
-    <p>Latest news and announcements from Western Visayas Region 5.</p>
+<section id="news" class="news">
+    <div class="news-content">
+
+        <h2>NEWS & ANNOUNCEMENTS</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Regional News</h3>
+                <p>
+                    Latest updates, accomplishments,
+                    activities, and announcements
+                    of Western Visayas Region 5.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Club News</h3>
+                <p>
+                    Featured activities and achievements
+                    of our member clubs.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Humanitarian News</h3>
+                <p>
+                    Stories of service, outreach,
+                    and community assistance.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
-<section id="contact">
-    <h2>CONNECT WITH US</h2>
-    <p>Follow our official Facebook page for updates and announcements.</p>
+<section id="gallery" class="gallery">
+    <h2>PHOTO GALLERY</h2>
 
-    <a class="facebook-button" href="https://www.facebook.com/" target="_blank">
-        VISIT FACEBOOK
-    </a>
+    <div class="gallery-box">
+        <h3>📸 WVR5 Activities and Memories</h3>
+
+        <p>
+            Our photos and videos documenting
+            brotherhood, fellowship, and humanitarian service
+            will be featured here.
+        </p>
+
+        <p>
+            Add your activity pictures
+            and event documentation here.
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>CONTACT US</h2>
+
+    <p>
+        The Fraternal Order of Eagles –
+        Philippine Eagles, Inc.
+    </p>
+
+    <p>
+        <strong>Western Visayas Region 5</strong>
+    </p>
+
+    <p>
+        Western Visayas, Philippines
+    </p>
+
+    <p>
+        For membership inquiries,
+        partnership, humanitarian activities,
+        and other concerns, please contact
+        our official regional representatives.
+    </p>
+
+    <p>
+        Facebook:
+        <a href="https://www.facebook.com/" target="_blank">
+            Visit Facebook
+        </a>
+    </p>
 </section>
 
 <footer>
-    <p>🦅 The Fraternal Order of Eagles – Philippine Eagles, Inc.</p>
-    <p>Western Visayas Region 5</p>
-    <p>Service Through Strong Brotherhood</p>
+    <p>
+        © 2026 The Fraternal Order of Eagles –
+        Philippine Eagles, Inc.
+    </p>
+
+    <p>
+        Western Visayas Region 5
+    </p>
+
+    <p>
+        Brotherhood • Unity • Service • Leadership
+    </p>
 </footer>
 
 </body>
